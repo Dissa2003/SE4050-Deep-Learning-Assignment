@@ -1,0 +1,73 @@
+# ===================================================================
+# .gitignore for PyTorch Deep Learning Project (SE4050 Assignment)
+# ===================================================================
+
+# ---------- Datasets ----------
+data/
+*.csv
+*.zip
+*.tar
+*.tar.gz
+*.h5
+*.npz
+*.npy
+
+# ---------- Model checkpoints / outputs ----------
+outputs/*.pth
+outputs/*.pt
+outputs/*.ckpt
+outputs/*.onnx
+outputs/logs/
+outputs/checkpoints/
+!outputs/.gitkeep
+
+# ---------- Jupyter Notebook ----------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ---------- Virtual environments ----------
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ---------- Environment / secrets ----------
+.env
+.env.*
+
+# ---------- IDE / editor ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---------- OS files ----------
+.DS_Store
+Thumbs.db
+
+# ---------- Logs & caches ----------
+*.log
+.cache/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# ---------- Experiment tracking ----------
+mlruns/
+wandb/
+lightning_logs/
+tensorboard_logs/
+runs/
