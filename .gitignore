@@ -17,9 +17,12 @@ outputs/*.pth
 outputs/*.pt
 outputs/*.ckpt
 outputs/*.onnx
+outputs/*.keras
+outputs/*.h5
 outputs/logs/
 outputs/checkpoints/
 !outputs/.gitkeep
+*.keras
 
 # ---------- Jupyter Notebook ----------
 .ipynb_checkpoints/
