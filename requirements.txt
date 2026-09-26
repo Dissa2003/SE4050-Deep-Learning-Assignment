@@ -3,6 +3,10 @@ torch
 torchvision
 torchaudio
 
+# TensorFlow model support
+tensorflow
+ipykernel
+
 # Data Handling & Numerical Computing
 numpy
 pandas>=2.2.0
