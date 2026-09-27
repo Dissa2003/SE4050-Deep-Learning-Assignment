@@ -74,3 +74,6 @@ wandb/
 lightning_logs/
 tensorboard_logs/
 runs/
+
+# Track the shared dataset split
+!/splits/brain_tumor_split_seed123.csv
