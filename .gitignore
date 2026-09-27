@@ -4,6 +4,7 @@
 
 # ---------- Datasets ----------
 data/
+../data/
 *.csv
 *.zip
 *.tar
