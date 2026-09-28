@@ -1,0 +1,52 @@
+{
+    "model": "EfficientNetB0",
+    "framework": "TensorFlow",
+    "tensorflow_version": "2.21.0",
+    "pretrained_weights": "ImageNet",
+    "seed": 123,
+    "data": {
+        "split_file": "splits/brain_tumor_split_seed123.csv",
+        "class_names": [
+            "glioma",
+            "meningioma",
+            "notumor",
+            "pituitary"
+        ],
+        "training_images": 4343,
+        "validation_images": 1086,
+        "test_images": 1584
+    },
+    "settings": {
+        "image_size": [
+            224,
+            224
+        ],
+        "batch_size": 16,
+        "input_pixel_range": "0–255; rescaling is inside EfficientNetB0",
+        "optimizer": "Adam",
+        "loss": "SparseCategoricalCrossentropy",
+        "dropout_rate": 0.3,
+        "head_learning_rate": 0.001,
+        "fine_tuning_learning_rate": 1e-05,
+        "head_epochs_completed": 10,
+        "fine_tuning_epochs_completed": 5,
+        "fine_tuned_layers": "block7 and top layers, excluding BatchNormalization"
+    },
+    "selection": {
+        "criterion": "Lowest validation loss across both training stages",
+        "selected_stage": "Fine-tuned",
+        "checkpoint": "outputs/efficientnet_b0/20260927_202528/best_fine_tuned_model.keras"
+    },
+    "test_results": {
+        "accuracy": 0.8952020406723022,
+        "loss": 0.36064621806144714,
+        "macro_precision": 0.8999930219290426,
+        "macro_recall": 0.8936667632202464,
+        "macro_f1": 0.8922348659094403,
+        "weighted_f1": 0.8929902412143834
+    },
+    "training_time_seconds": {
+        "head_training": 1528.3751974999905,
+        "fine_tuning": 1050.3904131999006
+    }
+}
