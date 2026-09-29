@@ -83,3 +83,6 @@ Trained model checkpoints and evaluation plots will be saved automatically to th
 ## Author
 
 SE4050 - Deep Learning Assignment
+
+
+YouTube Link-https://youtu.be/wXEDbwNeXkw
